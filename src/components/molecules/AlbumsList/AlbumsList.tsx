@@ -1,12 +1,13 @@
 import {cn} from "@/helpers/ClassNames/ClassNames";
-import React from "react";
+import {FunctionComponent} from "react";
 
 type AlbumsListProps = {
   album?: number | null,
   albums: number[],
   setAlbum: (album: number | null) => void
 }
-const AlbumsList = ({album, albums, setAlbum}: AlbumsListProps) => {
+
+const AlbumsList:FunctionComponent<AlbumsListProps> = ({album, albums, setAlbum}) => {
   return (
     <>
       {albums && (<ul className="w-auto flex gap-2 flex-grow lg:flex-grow-0 order-1">
